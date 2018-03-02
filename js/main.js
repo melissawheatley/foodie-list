@@ -5,3 +5,4 @@ console.log("main.js present");
 let restaurantData = require('./foodie-list');
 let render = require('./render');
 let select = require('./populateSelect');
+let filterByCity = require('./matchCityFilter');
