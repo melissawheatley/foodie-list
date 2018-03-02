@@ -6,7 +6,6 @@ let restaurantData = require('./foodie-list');
 
 //VARIABLES
 let fillRatingsDiv = document.getElementById("ratingsDiv");
-let restaurantArray = [];
 var restaurantList= "";
 
 
@@ -17,10 +16,14 @@ function displayAll(){
     // console.log("preparing to display all restaurants");
     var keys;
     for(keys in resolve){
-        console.log("keys", keys);
+        // console.log("keys", keys);
+        resolve.sort(function(a,b){
+            return a.my_rating - b.my_rating;
+        });
+        resolve.reverse();
         restaurantList += `<h3>${resolve[keys].restaurant}</h3><p><strong><em>Star Rating:</strong></em> ${resolve[keys].my_rating}</p>`;
     }
-    console.log("restaurantList: ", restaurantList); 
+    // console.log("restaurantList: ", restaurantList); 
     fillRatingsDiv.innerHTML = restaurantList;
 });
 }
