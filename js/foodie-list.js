@@ -14,7 +14,7 @@ function getRestaurants(){
     loader.addEventListener('error', function(){
         reject(console.log("There was a problem loading restaurants."));
     });
-    loader.open("GET", `./lib/restaurants.json`);
+    loader.open("GET", `https://foodie-list-5b7c9.firebaseio.com/restaurants.json`);
     loader.send();
     });
 }
