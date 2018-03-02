@@ -1,12 +1,12 @@
 {
   "name": "lib",
   "version": "1.0.0",
-  "description": "",
+  "description": "lib for foodie list special exercise",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Melissa Wheatley",
   "license": "ISC",
   "devDependencies": {
     "browserify": "^15.2.0",
@@ -18,5 +18,14 @@
     "jshint": "^2.9.5",
     "jshint-stylish": "^2.2.1",
     "matchdep": "^2.0.0"
-  }
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/melissawheatley/foodie-list.git"
+  },
+  "bugs": {
+    "url": "https://github.com/melissawheatley/foodie-list/issues"
+  },
+  "homepage": "https://github.com/melissawheatley/foodie-list#readme"
 }
