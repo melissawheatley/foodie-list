@@ -3,7 +3,7 @@
 console.log("foodie-list.js has arrived");
 
 function getRestaurants(){
-    console.log("getting all restaurants");
+    // console.log("getting all restaurants");
     return new Promise((resolve,reject) => {
         var loader = new XMLHttpRequest();
     loader.addEventListener('load', function(){
