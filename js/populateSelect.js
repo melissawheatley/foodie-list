@@ -7,7 +7,7 @@ let render = require('./render');
 
 //VARIABLES
 var dropdown = document.getElementById("dropdown");
-var cityName = `<option selected>Choose a City</option>`;
+var cityName = `<option id ="default" value="chooseCity">Choose a City</option>`;
 
 //FUNCTION
 function showCityNames(){
@@ -16,9 +16,11 @@ function showCityNames(){
     var keys;
     for(keys in resolve){
         var cityVar = resolve[keys].city;
-        cityName += `<option value="${cityVar}">${cityVar}</option>`;
-        console.log("city ids: ", cityName);
+        var cityID = resolve[keys].id;
+        cityName += `<option id=${cityID} value="${cityVar}">${cityVar}</option>`;
+        // console.log("city ids: ", cityName);
     }
+    cityName += `<option id="ViewAll" value="ViewAll">View All</option>`;
     dropdown.innerHTML = cityName;
 });
 }

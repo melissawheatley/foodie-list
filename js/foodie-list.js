@@ -26,7 +26,7 @@ function getCities(){
     loader.addEventListener('load', function(){
         var allCities = JSON.parse(this.responseText);
         resolve(allCities);
-        console.log(allCities);
+        // console.log(allCities);
     });
     loader.addEventListener('error', function(){
         reject(console.log("There was a problem getting cities."));

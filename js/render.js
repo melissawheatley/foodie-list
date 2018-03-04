@@ -21,7 +21,7 @@ function displayAll(){
             return a.my_rating - b.my_rating;
         });
         resolve.reverse();
-        restaurantList += `<h3>${resolve[keys].restaurant}</h3><p><strong><em>Star Rating:</strong></em> ${resolve[keys].my_rating}</p>`;
+        restaurantList += `<h3>${resolve[keys].restaurant} — <em>${resolve[keys].city_id}</em></h3><p><strong><em>Star Rating:</strong></em> ${resolve[keys].my_rating}</p>`;
     }
     // console.log("restaurantList: ", restaurantList); 
     fillRatingsDiv.innerHTML = restaurantList;
