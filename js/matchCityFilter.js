@@ -23,12 +23,15 @@ function changeSelection(event){
 .then(function(resolve){
     var keys;
     var listInCity = "";
-    console.log("resolve", resolve);
+    // console.log("resolve", resolve);
     for(keys in resolve){
         if(selectID == resolve[keys].city_id){ 
         listInCity += `<h3>${resolve[keys].restaurant}</h3><p><strong><em>Star Rating:</strong></em> ${resolve[keys].my_rating}</p>`;
         }else if(selectID == "ViewAll"){
             renderDOM.displayAll();
+        }else if(selectID == "default"){
+            renderDOM.displayAll();
+            //would have preferred for line 30 to be an or, but couldn't make it work
         }else{console.log("this key was not a match");
         }
     fillRatingsDiv.innerHTML = listInCity;
