@@ -28,11 +28,6 @@ function displayAll(){
 });
 }
 
-// restaurantArray.push(resolve.restaurants[keys]); 
-// then create another function that will order restaurantArray items by resolve.restaurants[keys].my_rating.
-// check and input boostrap card classes
-
-
 displayAll();
 
 module.exports = {displayAll};
