@@ -25,8 +25,10 @@ function changeSelection(event){
     var listInCity = "";
     console.log("resolve", resolve);
     for(keys in resolve){
-        if(resolve[keys].city_id == selectID){ 
+        if(selectID == resolve[keys].city_id){ 
         listInCity += `<h3>${resolve[keys].restaurant}</h3><p><strong><em>Star Rating:</strong></em> ${resolve[keys].my_rating}</p>`;
+        }else if(selectID == "ViewAll"){
+            renderDOM.displayAll();
         }else{console.log("this key was not a match");
         }
     fillRatingsDiv.innerHTML = listInCity;
