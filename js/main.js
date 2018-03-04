@@ -2,7 +2,9 @@
 console.log("main.js present");
 
 //REQUIRE
-let restaurantData = require('./foodie-list');
-let render = require('./render');
-let select = require('./populateSelect');
-let filter = require('./matchCityFilter');
+let restaurantData = require('./foodie-list'),
+render = require('./render'),
+select = require('./populateSelect'),
+filter = require('./matchCityFilter'),
+form = require('./fb-form');
+

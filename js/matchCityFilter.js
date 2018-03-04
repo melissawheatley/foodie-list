@@ -46,8 +46,9 @@ function changeSelection(event){
 .then(() => {
     if(selectID == 7){
         hometownDiv.innerHTML = `<p class="green"> <img src="https://useiconic.com/open-iconic/svg/home.svg" alt="home" width="10px" height="10px"> This is your hometown!</p>`;
-    }else{
+    }else if(selectID !== 7){
         console.log("this is not your hometown");
+        hometownDiv.innerHTML = "";
     }
 });
 }
